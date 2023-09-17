@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Site Favicon -->
+    <link rel="shortcut icon" href="Resources\Favicon\music-solid-favicon.svg" type="image/x-icon">
+    <!-- link style.css -->
+    <link rel="stylesheet" href="style.css">
+    <script>src = "script.js"</script>
+    <title>Lite Music Player</title>
+</head>
+
+<body class="lightMode" class="darkMode">
+    <div class="container">
+        <h1 class="title">Lite Music Player</h1>
+        <div class="music-player">
+            <audio id="audioPlayer">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button id="playPauseBtn">Play</button>
+                <input type="range" id="progressSlider" min="0" step="1">
+                <div id="progressTime" class="progress-time">0:00 / 0:00</div>
+                <select id="speedSelect">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="1.75">1.75x</option>
+                    <option value="2">2x</option>
+                </select>
+            </div>
+            <div class="music-list">
+                <ul id="songList">
+                    <!-- Dynamic song list will be generated here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="watermark">© 
+        <a class ="github-link github-link-1" target="_blank" href="https://sintcoltd.github.io/url/gh.html?gh=SintcoLTD">SintcoLTD</a> - 
+        <a class ="github-link github-link-1" target="_blank" href="https://sintcoltd.github.io/url/gh.html?gh=NajmAjmal">Najm Ajmal</a> & 
+        <a class ="github-link github-link-1" target="_blank" href="https://sintcoltd.github.io/url/gh.html?gh=sulaymaanajmal">Sulaymaan Ajmal</a> 
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
